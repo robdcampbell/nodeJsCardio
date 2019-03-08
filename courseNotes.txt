@@ -1,0 +1,47 @@
+// NOTES FROM NODE.JS COURSE
+
+    // PDF File from course is available. 
+
+
+
+//  __ 03/8/2019 __ 
+
+  Modules in Node.js (from NPM)
+  __ __
+
+  require() -> used to import and use various modules within another file. (typical in node.js to do basically anything, in the first case using 'fs' to write/create a new file.)
+
+ex:   const fs = require('fs');
+  __ __
+
+  -  _fs_ (file system)
+  - fs.writeFileSync(nameOfFile, data);
+  - fs.appendFileSync(nameOfFile, data);
+
+  __ fs __  (fileSystem) is resposible from writing to particular files. If the file in the first argument doesnt exist, it will create that file, and if it does, the content will be overridden. 
+
+  __ __
+  __ __
+
+  : module.exports = variable;
+
+      Whatever you define as 'module.exports' will be avaible/the return value when you require the file in another location. 
+
+
+__ __ 
+__ __
+
+: Installing NPM and dependent modules
+
+ - validator (npm install validator)
+  useful functions: 
+    .isEmail()
+    .isURL()
+
+__ __ 
+__ __
+
+: Global NPM modules and Nodemon
+
+  install nodemon (globally): npm install nodemon -g 
+
