@@ -6,11 +6,18 @@
 
   // DEBUGGING
 
-  insert: debugger
+  1) insert: debugger
+  2) from terimanal: node inspect fileName.js (command, etc...)
+  3) in chrome:   chrome://inspect
+  4) run debugger in source and stop at possible debugger breakpoints 
 
   - after you add/insert the 'debugger' keyword where you want to begin inpecting, run "node inspect fileName (other possible arguments)"
 
-  
+  *** IMPORTANT: TROUBLESHOOTING ***: 
+      - DIDNT AUTOMATICALLY SHOW FILE, had to run this in terminal:
+      ** YOUR WORKING DIRECTORY MUST BE CORRECT TO RUN DEBUGGER COMMAND FROM  TERMINAL:
+
+        node --inspect-brk app.js
 
 
 // **************** __ 03/9/2019 __ **************** //
