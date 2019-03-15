@@ -10,6 +10,12 @@ request({ url: url,json:true }, (error,response)=>{
 })
 
 
+
+//  HERE IT IS DUMMY: 
+
+// https://api.mapbox.com/geocoding/v5/mapbox.places/Los%20Angeles.json?access_token=pk.eyJ1IjoicmRlYW5jYW1wYmVsbCIsImEiOiJjanQ2NnVtc3kwYnRqNDl0bWZ3dm14djZnIn0.2uwRjrVyvd0JdIqh8Zjirg
+
+
 // BROKEN ::::: NEED TO FIX 
 
 // const geocodeURL = 'https://api.mabox.com/geocoding/v5/mapbox.places/Los%Angeles.json?access_token=pk.eyJ1IjoicmRlYW5jYW1wYmVsbCIsImEiOiJjanQ2NnVtc3kwYnRqNDl0bWZ3dm14djZnIn0.2uwRjrVyvd0JdIqh8Zjirg'
