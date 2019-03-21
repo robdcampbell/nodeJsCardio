@@ -2,6 +2,17 @@
 
     // PDF File from course is available. 
 
+
+// **************** __ 03/21/2019 __ ************** 
+
+  NODE: templating (handlebars), partials, views
+
+  ** nodemon with js and hbs extenstions:    nodemon src/app.js -e js,hbs
+
+    1) Configuration: 
+
+
+
 // **************** __ 03/12/2019 __ ************** 
 
   // DEBUGGING
