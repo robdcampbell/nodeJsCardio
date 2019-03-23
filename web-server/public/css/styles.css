@@ -48,3 +48,15 @@ h1{
   width: 400px;
 }
 
+input {
+  border: 1px solid #cccccc;
+  padding: .5rem;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid #888888;
+  background: #888888;
+  color: white;
+  padding: .5rem;
+}
