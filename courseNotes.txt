@@ -9,6 +9,9 @@ Deploying to heroku:
   1) once ssh keys are set up (and heroku cli is installed):
      run heroku keys:add
   2) heroku create ( UNIQUE NAME___ ex: campbell-weather-node-app)
+  3) in package.json, create a start script:
+     "start": "node src/app.js"
+  4) git push heroku master
 
 // **************** __ 03/21/2019 __ ************** 
 
