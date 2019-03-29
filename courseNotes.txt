@@ -2,6 +2,9 @@
 
     // PDF File from course is available. 
 
+// **************** __ 03/29/2019 __ ************** 
+
+explore: 
 
 // **************** __ 03/28/2019 __ ************** 
 
@@ -14,6 +17,9 @@ STARTING::
     /Users/robertacajado/mongodb/bin/mongod --dbpath=/Users/robertacajado/mongodb-data
 
   ^ ^ this command must be run before connecting with Robo 3T
+  3) In the GUI, ctr + click (connection Name) and open a new shell
+  4) In shell, run:   db.version()  - (click the 'Play' button)
+
 
 
 // **************** __ 03/26/2019 __ ************** 
