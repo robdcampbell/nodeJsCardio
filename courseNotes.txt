@@ -2,6 +2,20 @@
 
     // PDF File from course is available. 
 
+
+// **************** __ 03/28/2019 __ ************** 
+
+MONGODB: 
+
+STARTING::
+ - once mongoDB is located in your users folder:
+  1) cd ~   (navigate to your user folder), run pwd to get path for 'users' folder
+  2)  run 2 things: path from users to mongoDB and dataBase initializer with the mongodb-data folder:
+    /Users/robertacajado/mongodb/bin/mongod --dbpath=/Users/robertacajado/mongodb-data
+
+  ^ ^ this command must be run before connecting with Robo 3T
+
+
 // **************** __ 03/26/2019 __ ************** 
 
 Deploying to heroku: 
