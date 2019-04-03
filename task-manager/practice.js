@@ -6,10 +6,8 @@ const databaseName = 'task-manager';
 
 MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error,client)=>{
   const db  = client.db(databaseName);
-  db.collection('users').insertOne({
-    name: 'Rob',
-    age: 30
-  })
+
+  // INSERTING  : Create
 
   // db.collection('users').insertOne({
       //   name:'Vikram',
