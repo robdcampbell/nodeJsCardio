@@ -33,7 +33,11 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true}, (error,client)=>{
   // })
 
   db.collection('tasks').findOne({ _id: new ObjectID("5ca0fab0de7ddd3d78e6bef1") }, (error,task) =>{
-    console.log('printing task');
+    console.log(task);
+  })
+
+  db.collection('tasks').find({completed: false}).toArray((error,tasks)=>{
+    console.log(tasks);
   })
       
 })
