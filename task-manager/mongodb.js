@@ -17,13 +17,13 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true}, (error,client)=>{
  
   const db = client.db(databaseName);
 
-  // db.collection('users').findOne({_id: new ObjectID("5ca109a62810793e77941fe5")}, (error, user)=> {
-  //   if(error){
-  //     return console.log('Unable to fetch');
-  //   }
+  db.collection('users').findOne({_id: new ObjectID("5ca109a62810793e77941fe5")}, (error, user)=> {
+    if(error){
+      return console.log('Unable to fetch');
+    }
 
-  //   console.log(user);
-  // })
+    console.log(user);
+  })
 
   // db.collection('users').find({ age: 26 }).toArray((error,users) => {
   //   console.log(users);
