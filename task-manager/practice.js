@@ -62,6 +62,7 @@ MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error,client)=>{
 
 
     //   READ
+
      // db.collection('users').findOne({_id: new ObjectID("5ca109a62810793e77941fe5")}, (error, user)=> {
   //   if(error){
   //     return console.log('Unable to fetch');
@@ -85,6 +86,41 @@ MongoClient.connect(connectionURL, {useNewUrlParser: true}, (error,client)=>{
   //   console.log(tasks);
   // })
 
- 
+
+
+
+
+ // UPDATING: 
+
+ // db.collection('users').updateOne({
+  //     _id: new ObjectID("5ca8d2537480dc5432aa530e")
+  //   }, {
+  //     $inc: {
+  //       age: 1
+  //     }
+  //   }).then((result)=>{
+  //     console.log(result);
+  //   }).catch((error)=>{
+  //     console.log(error);
+  //   })
+
+  // db.collection('tasks').updateMany({
+  //     completed:false
+  //   },{
+  //     $set: {
+  //       completed: true
+  //     }
+  //   }
+  
+  // ).then((result)=>{
+  //   console.log(result)
+  // }).catch((error)=>{
+  //   console.log(error)
+  // })
+
+
+  
+
+
 
 })
