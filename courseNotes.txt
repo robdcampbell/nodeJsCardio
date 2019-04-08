@@ -2,7 +2,132 @@
 
     // PDF File from course is available. 
 
-// **************** __ 03/29/2019 __ ************** 
+// **************** __ 04/08/2019 __ ************** 
+
+
+// **************** __ 04/07/2019 __ ************** 
+
+  MONGODB: exploring basic CRUD operations ::
+
+    // INSERTING  : Create
+
+  // db.collection('users').insertOne({
+      //   name:'Vikram',
+      //   age: '26'
+      // }, (error, result) => {
+      //     if(error){
+      //       return console.log('Unable to insert user');
+      //     }
+
+      //     console.log(result.ops)
+      // })
+    
+      // db.collection('users').insertMany([
+      //   {
+      //     name: 'Jen',
+      //     age: 28
+      //   },
+      //   {
+      //     name: 'Gunther',
+      //     age: 26
+      //   }
+      // ], (error, result)=>{
+      //   if(error){
+      //     return console.log('Unable to insert documents!')
+      //   }
+
+      //   console.log(result.ops);
+      // })
+
+    // db.collection('tasks').insertMany([
+    //   {
+    //     description: 'Buy groceries',
+    //     completed: true
+    //   },
+    //   {
+    //     description:  'Make marathon playlist',
+    //     completed: false
+    //   },
+    //   {
+    //     description: 'Finish portfolio site',
+    //     completed: false
+    //   }
+    // ], (error,result)=>{
+    //   if(error){
+    //     return console.log('Unable to add tasks!')
+    //   }
+
+    //   console.log(result.ops)
+    //  })
+
+
+
+
+    //   READ
+
+     // db.collection('users').findOne({_id: new ObjectID("5ca109a62810793e77941fe5")}, (error, user)=> {
+  //   if(error){
+  //     return console.log('Unable to fetch');
+  //   }
+
+  //   console.log(user);
+  // })
+
+  // db.collection('users').find({ age: 26 }).toArray((error,users) => {
+  //   console.log(users);
+  // })
+  // db.collection('users').find({ age: 26 }).toArray((error,count) => {
+  //   console.log(count);
+  // })
+
+  // db.collection('tasks').findOne({ _id: new ObjectID("5ca0fab0de7ddd3d78e6bef1") }, (error,task) =>{
+  //   console.log(task);
+  // })
+
+  // db.collection('tasks').find({completed: false}).toArray((error,tasks)=>{
+  //   console.log(tasks);
+  // })
+
+
+
+
+
+ // UPDATING: 
+
+ // db.collection('users').updateOne({
+  //     _id: new ObjectID("5ca8d2537480dc5432aa530e")
+  //   }, {
+  //     $inc: {
+  //       age: 1
+  //     }
+  //   }).then((result)=>{
+  //     console.log(result);
+  //   }).catch((error)=>{
+  //     console.log(error);
+  //   })
+
+  // db.collection('tasks').updateMany({
+  //     completed:false
+  //   },{
+  //     $set: {
+  //       completed: true
+  //     }
+  //   }
+  
+  // ).then((result)=>{
+  //   console.log(result)
+  // }).catch((error)=>{
+  //   console.log(error)
+  // })
+
+
+  
+
+
+
+})
+
+
 
 explore: 
 
@@ -10,11 +135,22 @@ explore:
 
 MONGODB: 
 
+INSTALLING: 
+
+  1) Download from: https://www.mongodb.com/download-center/community  (whatever the current release is)
+  2) Move 'mongodb' folder into main User DIRECTORY (run cd, than pwd if you want the path from CMD line)
+  3) In same directory, create the 'mongodb-data' folder (sibling directory to mongodb just created)
+  4) run /Users/(rcampbell1)/mongodb/bin/mongod --dbpath=/Users/(rcampbell1)/mongodb-data, to initialize server and populate database files in monogodb-data
+
 STARTING::
+
+  run: 
+  -- -- /Users/(USERNAME)/mongodb/bin/mongod --dbpath=/Users/(USERNAME)/mongodb-data -- --
+
  - once mongoDB is located in your users folder:
   1) cd ~   (navigate to your user folder), run pwd to get path for 'users' folder
   2)  run 2 things: path from users to mongoDB and dataBase initializer with the mongodb-data folder:
-    /Users/robertacajado/mongodb/bin/mongod --dbpath=/Users/robertacajado/mongodb-data
+    /Users/USERNAME/mongodb/bin/mongod --dbpath=/Users/USERNAME/mongodb-data
 
   ^ ^ this command must be run before connecting with Robo 3T
   3) In the GUI, ctr + click (connection Name) and open a new shell

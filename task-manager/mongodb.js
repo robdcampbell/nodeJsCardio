@@ -19,20 +19,13 @@ MongoClient.connect(connectionURL, { useNewUrlParser: true}, (error,client)=>{
 
   // DELETE
 
-  // db.collection('users').deleteMany({
-  //   age:'26'
-  // }).then((result)=>{
-  //   console.log(result);
-  // }).catch((error)=>{
-  //   console.log(error);
-  // })
-
-  db.collection('tasks').deleteOne({
-    description: 'Finish portfolio site'
+  db.collection('tasks').deleteMany({
+      description: 'Fix flat tire',
+      completed: false
   }).then((result)=>{
-    console.log(result);
+    console.log(result)
   }).catch((error)=>{
-    console.log(error);
+    console.log(error)
   })
 
 })
