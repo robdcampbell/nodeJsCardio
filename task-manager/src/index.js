@@ -8,6 +8,8 @@ const port = process.env.port || 3000;
 
 app.use(express.json());
 
+// USERS
+
 app.post('/users',(req,res)=>{
   const user = new User(req.body);
 
@@ -16,6 +18,16 @@ app.post('/users',(req,res)=>{
   }).catch((e)=>{
     res.status(400).send(e)
   })
+})
+
+app.get('/users',(req,res)=>{
+  User.find({ }).then((users)=>{
+    res.send(users);
+  }).catch((e)=>{
+
+  })
+
+
 })
 
 app.post('/tasks', (req,res)=>{
