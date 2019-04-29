@@ -51,6 +51,10 @@ userSchema.pre('save', async function (next) {
   next()
 })
 
+// FIX THIS SCHEMA
+
+const userSchema2 = {};
+
 const User = mongoose.model('User', userSchema)
 
 module.exports = User
