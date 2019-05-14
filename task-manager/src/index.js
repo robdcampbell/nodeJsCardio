@@ -16,9 +16,11 @@ const port = process.env.port || 3000;
 //   }
 //})
 
-app.use((req,res,next)=> {
-  res.status(503).send("Site is currently down. Check back soon!")
-})
+
+// EXAMPLE MAINTENANCE MIDDLEWARE
+// app.use((req,res,next)=> {
+//   res.status(503).send("Site is currently down. Check back soon!")
+// })
 
 app.use(express.json());
 app.use(userRouter);
