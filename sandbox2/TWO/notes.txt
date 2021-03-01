@@ -1,0 +1,1 @@
+Node.js Blog created using node.js and (ejs) as the HTML template engine.
