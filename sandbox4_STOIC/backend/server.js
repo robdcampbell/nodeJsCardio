@@ -36,6 +36,7 @@ app.post("/todos", async (req, res) => {
   try {
     //await req.body()
     const { description } = req.body;
+    //PAY ATTENTION TO THE RETURNING KEYWORD
     const newTodo = await pool.query(
       "INSERT INTO todo (description) VALUES ($1) RETURNING *",
       [description]
@@ -47,8 +48,33 @@ app.post("/todos", async (req, res) => {
 });
 
 // update a todo
+app.put("/todos/:id", async (req, res) => {
+  const { id } = req.params;
+  const { description } = req.body;
+  try {
+    const updateTodo = await pool.query(
+      "UPDATE todo SET description=($1) WHERE todo_id=($2)",
+      [description, id]
+    );
+    res.status(200).json(`Todo ${id} was updated`);
+  } catch (error) {
+    console.error(error);
+  }
+});
 
 // delete a todo
+app.delete("/todos/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const deleteTodo = await pool.query("DELETE FROM todo WHERE todo_id=($1)", [
+      id,
+    ]);
+
+    res.status(200).json(`Todo ${id} deleted!`);
+  } catch (error) {
+    console.error(error);
+  }
+});
 
 app.get("/", (req, res) => {
   res.json({ message: "Go Time!" });
